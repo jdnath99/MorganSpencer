@@ -3,6 +3,7 @@ package StepDef;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,6 +28,9 @@ public class EnterInformation_StepDef {
     @Then("User should see the age")
     public void user_should_see_the_age() {
 
+
+        Assert.assertEquals("Hello !" ,BaseClass.Homepageobj.getsuccessmethod());
     }
+
 
 }

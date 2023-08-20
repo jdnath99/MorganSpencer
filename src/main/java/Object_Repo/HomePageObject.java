@@ -24,6 +24,9 @@ public class HomePageObject {
     @FindBy(xpath = "//*[@id=\"submitButton\"]")
     WebElement ClickSubmitbutton;
 
+    @FindBy(xpath = "//*[@id=\"resultDiv\"]/h1[1]")
+    WebElement Ageverificationsuccessful;
+
     public void Enteryourname(String yourname){
         Yournamefield.sendKeys(yourname);
     }
@@ -34,6 +37,10 @@ public class HomePageObject {
 
     public void Submitbutton(){
         ClickSubmitbutton.click();
+    }
+
+    public String getsuccessmethod(){
+        return Ageverificationsuccessful.getText();
     }
 
 }
